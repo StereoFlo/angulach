@@ -1,1 +1,11 @@
-<p> {{ board | json }} </p>
+<p> name: {{ board.id }}</p>
+<p> Тредов: {{ board.threads_count }}</p>
+<p></p>
+<div *ngFor="let thread of board.threads">
+  <hr>
+  <p>Тема {{thread.subject }}</p>
+  <p>Ответов {{ thread.post_count }}</p>
+  <p [innerHTML]="thread.comment">Комент</p>
+  <p>Скоре {{thread.score}}</p>
+  <p>Просмотры {{thread.views}}</p>
+</div>

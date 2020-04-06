@@ -1,6 +1,7 @@
 export class Board {
   id: string;
-  threadsCount: number;
+  // tslint:disable-next-line:variable-name
+  threads_count: number;
   threads: [
     {
       subject: string;
