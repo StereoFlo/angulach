@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {BoardList} from '../models/boardList';
 import {Board} from '../models/board';
 import {Thread} from '../models/thread';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,14 +15,14 @@ export class DvachService {
   }
 
   public getBoardList(): Observable<BoardList[]> {
-    return this.httpClient.get<BoardList[]>('http://angulach.lan/v1/board');
+    return this.httpClient.get<BoardList[]>(`${environment.apiUrl}/v1/board`);
   }
 
   public getBoardById(boardId: string): Observable<Board> {
-    return this.httpClient.get<Board>('http://angulach.lan/v1/board/' + boardId);
+    return this.httpClient.get<Board>(`${environment.apiUrl}/v1/board/${boardId}`);
   }
 
   public getThread(boardId: string, threadId: number): Observable<Thread> {
-    return this.httpClient.get<Thread>('http://angulach.lan/v1/board/' + boardId + '/' + threadId);
+    return this.httpClient.get<Thread>(`${environment.apiUrl}/v1/board/${boardId}/${threadId}`);
   }
 }
