@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BoardListComponent } from './components/board-list/board-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BoardShowComponent } from './components/board-show/board-show.component';
+import { ThreadShowComponent } from './components/thread-show/thread-show.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardListComponent,
-    BoardShowComponent
+    BoardShowComponent,
+    ThreadShowComponent
   ],
   imports: [
     BrowserModule,

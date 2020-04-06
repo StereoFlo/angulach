@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {BoardList} from '../models/boardList';
 import {Board} from '../models/board';
+import {Thread} from '../models/thread';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +19,9 @@ export class DvachService {
 
   public getBoardById(boardId: string): Observable<Board> {
     return this.httpClient.get<Board>('http://angulach.lan/v1/board/' + boardId);
+  }
+
+  public getThread(boardId: string, threadId: number): Observable<Thread> {
+    return this.httpClient.get<Thread>('http://angulach.lan/v1/board/' + boardId + '/' + threadId);
   }
 }

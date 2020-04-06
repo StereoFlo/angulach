@@ -1,0 +1,6 @@
+<p> {{ thread.title }} ({{ thread.post_count }})</p>
+<p> уникальных коментаторов {{ thread.unique_posters }}</p>
+<div *ngFor="let post of thread.posts">
+  <p>Написал {{ post.name }}</p>
+  <p [innerHTML]="post.comment"></p>
+</div>

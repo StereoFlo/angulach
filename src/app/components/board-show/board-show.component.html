@@ -3,7 +3,7 @@
 <p></p>
 <div *ngFor="let thread of board.threads">
   <hr>
-  <p>Тема {{thread.subject }}</p>
+  <p>Тема <a href="/board/{{ board.id }}/thread/{{ thread.num }}">{{ thread.subject }}</a></p>
   <p>Ответов {{ thread.post_count }}</p>
   <p [innerHTML]="thread.comment">Комент</p>
   <p>Скоре {{thread.score}}</p>
