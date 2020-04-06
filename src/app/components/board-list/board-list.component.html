@@ -1,0 +1,8 @@
+<div *ngFor="let board of list">
+  <p>{{board.name }} ({{ board.boardCount }})</p>
+    <ul *ngFor="let board of board.boards">
+      <li>
+        <a href="/board/{{ board.id }}">{{ board.name }}</a>
+      </li>
+    </ul>
+</div>

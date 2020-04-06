@@ -3,14 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BoardListComponent } from './components/board-list/board-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BoardShowComponent } from './components/board-show/board-show.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BoardListComponent,
+    BoardShowComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
