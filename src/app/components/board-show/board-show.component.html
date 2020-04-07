@@ -1,4 +1,4 @@
-<p> name: {{ board.id }}</p>
+<p> name: {{ board.id ? board.id : 'Net id' }}</p>
 <p> Тредов: {{ board.threads_count }}</p>
 <p></p>
 <div *ngFor="let thread of board.threads">
