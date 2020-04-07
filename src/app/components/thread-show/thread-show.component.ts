@@ -20,6 +20,8 @@ export class ThreadShowComponent implements OnInit {
       return;
     }
 
+    this.thread = new Thread();
+
     this.dvachService.getThread(this.route.snapshot.params.boardId, this.route.snapshot.params.threadId).subscribe(thread => {
       this.thread = thread;
     });
