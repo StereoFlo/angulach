@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://angulach.lan'
+  apiUrl: 'http://localhost'
 };
 
 /*
