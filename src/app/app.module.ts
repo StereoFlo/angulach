@@ -10,8 +10,10 @@ import { ThreadShowComponent } from './components/thread-show/thread-show.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatExpansionModule} from '@angular/material/expansion';
-import {MatChipsModule} from '@angular/material/chips';
+import {MatBadgeModule} from '@angular/material/badge';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     HttpClientModule,
     BrowserAnimationsModule,
     MatExpansionModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule,
+    MatBadgeModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
