@@ -1,8 +1,27 @@
-<div *ngFor="let board of list">
-  <p>{{board.name }} ({{ board.board_count }})</p>
-    <ul *ngFor="let board of board.boards">
-      <li>
-        <a href="/board/{{ board.id }}">{{ board.name }}</a>
-      </li>
-    </ul>
-</div>
+<!--<div *ngFor="let board of list">-->
+<!--  <p>{{board.name }} ({{ board.board_count }})</p>-->
+<!--    <ul *ngFor="let board of board.boards">-->
+<!--      <li>-->
+<!--        <a href="/board/{{ board.id }}">{{ board.name }}</a>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--</div>-->
+<mat-accordion>
+
+  <mat-expansion-panel *ngFor="let board of list">
+    <mat-expansion-panel-header class="section-list-header">
+      <span class="section-title">{{board.name }}</span>
+      <span class="section-title-count">{{ board.board_count }}</span>
+
+    </mat-expansion-panel-header>
+
+    <div class="collection" *ngFor="let board of board.boards">
+      <a class="collection-item" href="/board/{{ board.id }}">
+        {{ board.name }}
+      </a>
+    </div>
+
+  </mat-expansion-panel>
+
+
+</mat-accordion>

@@ -1,0 +1,26 @@
+.section-title {
+  font-weight: 500;
+  margin-right: 30px;
+  min-width: 200px;
+}
+
+.section-title-count {
+  text-align: center;
+  color: white;
+  background: cadetblue;
+  padding: 0 6px;
+  border-radius: 4px;
+  min-width: 30px;
+}
+
+.collection {
+  border-top: 1px solid #eaeaea;
+  padding: 10px 0 10px 10px;
+
+  a {
+    color: gray;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+  }
+}

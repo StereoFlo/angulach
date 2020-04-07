@@ -14,14 +14,14 @@ export class DvachService {
   }
 
   public getBoardList(): Observable<BoardList[]> {
-    return this.httpClient.get<BoardList[]>('http://angulach.lan/v1/board');
+    return this.httpClient.get<BoardList[]>('http://localhost/v1/board');
   }
 
   public getBoardById(boardId: string): Observable<Board> {
-    return this.httpClient.get<Board>('http://angulach.lan/v1/board/' + boardId);
+    return this.httpClient.get<Board>('http://localhost/v1/board/' + boardId);
   }
 
   public getThread(boardId: string, threadId: number): Observable<Thread> {
-    return this.httpClient.get<Thread>('http://angulach.lan/v1/board/' + boardId + '/' + threadId);
+    return this.httpClient.get<Thread>('http://localhostпш/v1/board/' + boardId + '/' + threadId);
   }
 }
