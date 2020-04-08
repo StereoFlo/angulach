@@ -12,8 +12,7 @@
 
 <mat-card class="tred" *ngFor="let thread of board.threads">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image">
-
+    <div mat-card-avatar class="tred-header-image">
     </div>
     <mat-card-title>
       <a href="/board/{{ board.id }}/thread/{{ thread.num }}">{{ thread.subject }}</a>
