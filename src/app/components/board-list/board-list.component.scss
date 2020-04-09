@@ -7,7 +7,7 @@
 .section-title-count {
   text-align: center;
   color: white;
-  background: cadetblue;
+  background: #0c7558;
   padding: 0 6px;
   border-radius: 4px;
   min-width: 30px;
@@ -18,10 +18,20 @@
   padding: 10px 0 10px 10px;
 
   a {
-    color: gray;
+    color: #888888;
     text-decoration: none;
     font-weight: 500;
     display: block;
   }
 }
 
+.mat-expansion-panel {
+  background: #333;
+  color: #eaeaea;
+}
+
+@media (hover: none) {
+  .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+    background: #333;
+  }
+}

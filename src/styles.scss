@@ -1,4 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%; width: 100%; }
+body {
+  margin: 0;
+  color: #eaeaea;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #121212;
+}
+a {
+  color: #356ce8;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+//
+/* Tred-card */
+//
+
+.tred {
+  margin-bottom: 25px;
+}
+.mat-card {
+  background: #333;
+  color: #eaeaea;
+  word-break: break-word;
+}
+.mat-card-subtitle {
+  color: #888888;
+}
+.mat-card-content {
+  padding-top: 16px;
+  text-align: justify;
+}
+.tred-score, .tred-views {
+  font-weight: 500;
+  color: #888888;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+.tred-post-count {
+  font-weight: 500;
+}
+.tred-header-image {
+  background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/9c/9cc82d1272888035907914bed18ceb92b24c9d63_medium.jpg');
+  background-size: cover;
+}
+
+.author {
+  font-size: 16px;
+  color: #888888;
+}

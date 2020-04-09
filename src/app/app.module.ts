@@ -15,6 +15,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 
+import { NgxSlideshowModule } from 'ngx-slideshow';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatToolbarModule,
     MatCardModule,
     MatBadgeModule,
-    MatDividerModule
+    MatDividerModule,
+    NgxSlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]
