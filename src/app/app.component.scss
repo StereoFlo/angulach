@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  color: white;
+}
+.content, .nav-wrapper {
+  max-width: 1200px;
+  margin:  0 auto;
+}
+
+.content {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.navbar {
+  margin: 0 0 20px 0;
+  background: #424242;
+}

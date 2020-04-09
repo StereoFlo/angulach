@@ -1,11 +1,41 @@
-<p> name: {{ board.id }}</p>
-<p> Тредов: {{ board.threads_count }}</p>
-<p></p>
-<div *ngFor="let thread of board.threads">
-  <hr>
-  <p>Тема <a href="/board/{{ board.id }}/thread/{{ thread.num }}" [innerHTML]="thread.subject"></a></p>
-  <p>Ответов {{ thread.post_count }}</p>
-  <p [innerHTML]="thread.comment">Комент</p>
-  <p>Скоре {{thread.score}}</p>
-  <p>Просмотры {{thread.views}}</p>
-</div>
+<mat-card class="section-info">
+  <mat-card-content>
+    <p> name: {{ board.id }}</p>
+  </mat-card-content>
+
+  <mat-card-content>
+    <p>
+      <span matBadge="{{ board.threads_count }}" matBadgeOverlap="false">Тредов</span>
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="tred" *ngFor="let thread of board.threads">
+  <mat-card-header>
+    <div mat-card-avatar class="tred-header-image">
+    </div>
+    <mat-card-title>
+      <a class="tred-link" href="/board/{{ board.id }}/thread/{{ thread.num }}">{{ thread.subject }}</a>
+    </mat-card-title>
+    <mat-card-subtitle class="tred-post-count">
+      Ответов: {{ thread.post_count }}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-content>
+    <p [innerHTML]="thread.comment">Комент</p>
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-content class="tred-content">
+    <p class="tred-score">Скоре: {{thread.score}}</p>
+    <p class="tred-views">Просмотры: {{thread.views}}</p>
+  </mat-card-content>
+</mat-card>
+
+
+
+

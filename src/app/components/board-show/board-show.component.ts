@@ -20,6 +20,8 @@ export class BoardShowComponent implements OnInit {
       return;
     }
 
+    this.board = new Board();
+
     this.dvachService.getBoardById(this.route.snapshot.params.id).subscribe(board => {
       this.board = board;
     });

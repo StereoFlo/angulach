@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {DvachService} from '../../services/dvach.service';
 import {BoardList} from '../../models/boardList';
 
+
 @Component({
   selector: 'app-board-list',
   templateUrl: './board-list.component.html',
