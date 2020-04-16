@@ -1,21 +1,4 @@
-<!--<p> {{ thread.title }} ({{ thread.post_count }})</p>-->
-<!--<p> уникальных коментаторов {{ thread.unique_posters }}</p>-->
-<!--<div *ngFor="let post of thread.posts">-->
-<!--  <div id="{{ post.num }}">-->
-<!--    <div *ngIf="post.files">-->
-<!--      <p *ngFor="let file of post.files">-->
-<!--        <a target="_blank" href="https://2ch.hk/{{ file.path }}">-->
-<!--          <img alt="{{ file.display_name }}" src="https://2ch.hk/{{ file.thumbnail }}">-->
-<!--        </a>-->
-<!--      </p>-->
-<!--    </div>-->
-<!--    <p>Написал {{ post.name }}</p>-->
-<!--    <p [innerHTML]="post.comment"></p>-->
-<!--  </div>-->
-<!--</div>-->
-
 <mat-card >
-
   <mat-card-header>
     <div mat-card-avatar class="tred-header-image">
     </div>
@@ -29,7 +12,7 @@
 
   <mat-divider></mat-divider>
   <div class="tred-content" *ngFor="let post of thread.posts">
-    <mat-card-content >
+    <mat-card-content id="{{ post.num }}">
       <div *ngIf="post.files">
         <p *ngFor="let file of post.files">
           <a target="_blank" href="https://2ch.hk/{{ file.path }}">
