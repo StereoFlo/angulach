@@ -9,7 +9,7 @@ import {Post} from '../../models/post';
 export class PostShowComponent implements OnInit {
 
   private linkPattern = /<a href="\/(\w+)\/res\/(\d+)\.html#(\d+)" class="post-reply-link" data-thread="\d+" data-num="\d+">*.+<\/a><br>(.*)/g;
-  private namePattern = /^.*ID:(.*)/;
+  private namePattern = /^.*ID:&nbsp;(.*)/;
 
   @Input() post: Post;
 
