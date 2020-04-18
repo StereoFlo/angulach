@@ -1,7 +1,7 @@
 <mat-card-content id="{{ post.num }}">
   <mat-card-content>
     <p class="author" [innerHTML]="post.name"></p>
-    <a routerLink="/board/{{ post.boardId }}/thread/{{ post.threadId }}#{{ post.answerTo }}" *ngIf="post.answerTo">{{ post.answerTo }}</a>
+    <a [routerLink]="['/board/' + post.boardId + '/thread/' + post.threadId]" fragment="{{ post.answerTo }}" *ngIf="post.answerTo">{{ post.answerTo }}</a>
     <p [innerHTML]="post.comment"></p>
   </mat-card-content>
 
