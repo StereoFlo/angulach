@@ -13,4 +13,7 @@ export class Post {
       thumbnail: string;
     }
   ]|null;
+  answerTo: number|null;
+  boardId: string;
+  threadId: number;
 }

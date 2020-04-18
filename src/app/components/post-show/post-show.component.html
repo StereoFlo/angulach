@@ -1,4 +1,10 @@
 <mat-card-content id="{{ post.num }}">
+  <mat-card-content>
+    <p class="author" [innerHTML]="post.name"></p>
+    <a routerLink="/board/{{ post.boardId }}/thread/{{ post.threadId }}#{{ post.answerTo }}" *ngIf="post.answerTo">{{ post.answerTo }}</a>
+    <p [innerHTML]="post.comment"></p>
+  </mat-card-content>
+
   <div *ngIf="post.files">
     <p *ngFor="let file of post.files">
       <a target="_blank" href="https://2ch.hk/{{ file.path }}">
@@ -8,9 +14,7 @@
   </div>
 </mat-card-content>
 
-<mat-divider></mat-divider>
 
-<mat-card-content>
-  <p class="author" [innerHTML]="post.name"></p>
-  <p [innerHTML]="post.comment"></p>
-</mat-card-content>
+<mat-divider class="comdiv"></mat-divider>
+
+
