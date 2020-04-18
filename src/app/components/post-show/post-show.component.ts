@@ -8,7 +8,8 @@ import {Post} from '../../models/post';
 })
 export class PostShowComponent implements OnInit {
 
-  private pattern = /<a href="\/(\w+)\/res\/(\d+)\.html#(\d+)" class="post-reply-link" data-thread="\d+" data-num="\d+">*.+<\/a><br>(.*)/g;
+  private linkPattern = /<a href="\/(\w+)\/res\/(\d+)\.html#(\d+)" class="post-reply-link" data-thread="\d+" data-num="\d+">*.+<\/a><br>(.*)/g;
+  private namePattern = /^.*ID:(.*)/;
 
   @Input() post: Post;
 
@@ -22,10 +23,11 @@ export class PostShowComponent implements OnInit {
       this.post.answerTo = +this.getVar(answerTo, '$3');
       this.post.boardId = this.getVar(boardId, '$1');
       this.post.threadId = +this.getVar(threadId, '$2');
+      this.post.name = this.post.name.replace(this.namePattern, '$1');
     }
   }
 
   private getVar(from: string, what: string): any {
-    return from.replace(this.pattern, what);
+    return from.replace(this.linkPattern, what);
   }
 }
