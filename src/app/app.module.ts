@@ -16,13 +16,15 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 
 import { NgxSlideshowModule } from 'ngx-slideshow';
+import {PostShowComponent} from './components/post-show/post-show.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardListComponent,
     BoardShowComponent,
-    ThreadShowComponent
+    ThreadShowComponent,
+    PostShowComponent
   ],
   imports: [
     BrowserModule,
