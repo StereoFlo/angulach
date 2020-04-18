@@ -1,17 +1,16 @@
 <mat-card>
   <mat-card-header>
-    <div mat-card-avatar class="tred-header-image">
-    </div>
     <mat-card-title>
-      {{ thread.title }} ({{ thread.post_count }})
+      {{ thread.title }}
     </mat-card-title>
     <mat-card-subtitle class="tred-post-count">
-      уникальных коментаторов {{ thread.unique_posters }}
+      Постов: {{ thread.post_count }}
+    </mat-card-subtitle>
+    <mat-card-subtitle class="tred-post-count">
+      Уникальных коментаторов: {{ thread.unique_posters }}
     </mat-card-subtitle>
   </mat-card-header>
 
   <mat-divider></mat-divider>
-  <div >
     <app-post-show class="tred-content" *ngFor="let post of thread.posts" [post]="post"></app-post-show>
-  </div>
 </mat-card>
