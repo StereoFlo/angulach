@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angulach';
+
+  appUrl = '';
+
+  constructor() {
+    this.appUrl = '/';
+  }
 }
