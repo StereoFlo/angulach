@@ -23,16 +23,7 @@ export class ThreadShowComponent implements OnInit {
     this.thread = new Thread();
 
     this.dvachService.getThread(this.route.snapshot.params.boardId, this.route.snapshot.params.threadId).subscribe(thread => {
-      const posts = [];
-
-      thread.posts.map(post => {
-        post.comment = post.comment.replace(/<a href="\/(\w+)\/res\/(\d+)\.html#(\d+)" class="post-reply-link" data-thread="\d+" data-num="\d+">*.+<\/a><br>(.*)/g, '<a href="/board/$1/thread/$2#$3">>>$3</a> | $4');
-        posts.push(post);
-      });
-
       this.thread = thread;
-      this.thread.posts = posts;
-
     });
   }
 

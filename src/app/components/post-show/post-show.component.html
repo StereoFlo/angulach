@@ -1,0 +1,16 @@
+<mat-card-content id="{{ post.num }}">
+  <div *ngIf="post.files">
+    <p *ngFor="let file of post.files">
+      <a target="_blank" href="https://2ch.hk/{{ file.path }}">
+        <img alt="{{ file.display_name }}" src="https://2ch.hk/{{ file.thumbnail }}">
+      </a>
+    </p>
+  </div>
+</mat-card-content>
+
+<mat-divider></mat-divider>
+
+<mat-card-content>
+  <p class="author" [innerHTML]="post.name"></p>
+  <p [innerHTML]="post.comment"></p>
+</mat-card-content>
