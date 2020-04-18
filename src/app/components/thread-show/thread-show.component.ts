@@ -11,6 +11,7 @@ import {Thread} from '../../models/thread';
 export class ThreadShowComponent implements OnInit {
 
   thread: Thread;
+  boardId: string;
 
   constructor(private dvachService: DvachService, private route: ActivatedRoute, private router: Router) { }
 
@@ -21,6 +22,7 @@ export class ThreadShowComponent implements OnInit {
     }
 
     this.thread = new Thread();
+    this.boardId = this.route.snapshot.params.boardId;
 
     this.dvachService.getThread(this.route.snapshot.params.boardId, this.route.snapshot.params.threadId).subscribe(thread => {
       this.thread = thread;

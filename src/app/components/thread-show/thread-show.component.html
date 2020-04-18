@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>
-      {{ thread.title }}
+    <a routerLink="/board/{{ boardId }}">Back</a> | {{ thread.title }}
     </mat-card-title>
     <mat-card-subtitle class="tred-post-count">
       Постов: {{ thread.post_count }}
