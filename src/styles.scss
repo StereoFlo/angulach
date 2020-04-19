@@ -5,8 +5,10 @@ html, body { height: 100%; width: 100%; }
 body {
   margin: 0;
   color: #eaeaea;
+  font-size: 16px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background: #121212;
+  position: relative;
 }
 a {
   color: #356ce8;
@@ -15,14 +17,25 @@ a {
     text-decoration: underline;
   }
 }
+p {
+  font-size: 16px;
+}
+strong {
+  font-weight: 500;
+}
+
+.mat-divider.tred-post-header-divider,  .mat-divider.post-header-divider{
+  border-top-width: 3px;
+}
+.mat-divider.post-header-divider {
+  margin-bottom: 12px;
+}
 
 //
 /* Tred-card */
 //
 
-.tred {
-  margin-bottom: 25px;
-}
+
 .mat-card {
   background: #333;
   color: #eaeaea;
@@ -32,24 +45,7 @@ a {
   color: #888888;
 }
 .mat-card-content {
-  padding-top: 16px;
+  //padding-top: 16px;
   text-align: justify;
 }
-.tred-score, .tred-views {
-  font-weight: 500;
-  color: #888888;
-  font-size: 13px;
-  margin-bottom: 0;
-}
-.tred-post-count {
-  font-weight: 500;
-}
-.tred-header-image {
-  background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/9c/9cc82d1272888035907914bed18ceb92b24c9d63_medium.jpg');
-  background-size: cover;
-}
 
-.author {
-  font-size: 16px;
-  color: #888888;
-}

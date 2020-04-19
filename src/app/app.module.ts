@@ -14,6 +14,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatIconModule} from '@angular/material/icon';
 
 import { NgxSlideshowModule } from 'ngx-slideshow';
 import {PostShowComponent} from './components/post-show/post-show.component';
@@ -36,9 +37,10 @@ import {PostShowComponent} from './components/post-show/post-show.component';
     MatCardModule,
     MatBadgeModule,
     MatDividerModule,
+    MatIconModule,
     NgxSlideshowModule
   ],
   providers: [Title],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

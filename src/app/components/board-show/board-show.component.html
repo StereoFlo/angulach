@@ -3,21 +3,17 @@
     <p>Борда загружается</p>
   </mat-card-content>
 </mat-card>
+
 <mat-card class="section-info" *ngIf="!isLoading">
-  <mat-card-content>
-    <p> name: {{ board.id }}</p>
-  </mat-card-content>
 
-  <mat-card-content>
-    <p>
-      <span matBadge="{{ board.threads_count }}" matBadgeOverlap="false">Тредов</span>
-    </p>
-  </mat-card-content>
-
-  <mat-card-content>
+    <span> name: {{ board.id }}</span>
+    <span>Тредов: {{ board.threads_count }}</span>
+<!--    <span matBadge="{{ board.threads_count }}" matBadgeOverlap="false">Тредов</span>-->
     <button (click)="loadBoard(board.id)">Обновить борду</button>
-  </mat-card-content>
+<!--    <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>-->
+
 </mat-card>
+
 <div *ngIf="!isLoading">
   <mat-card class="tred" *ngFor="let thread of board.threads">
     <mat-card-header>
@@ -31,17 +27,17 @@
       </mat-card-subtitle>
     </mat-card-header>
 
-    <mat-divider></mat-divider>
+    <mat-divider class="tred-divider"></mat-divider>
 
-    <mat-card-content>
+    <mat-card-content class="tred-content">
       <p [innerHTML]="thread.comment">Комент</p>
     </mat-card-content>
 
-    <mat-divider></mat-divider>
+    <mat-divider class="tred-divider"></mat-divider>
 
-    <mat-card-content class="tred-content">
-      <p class="tred-score">Скоре: {{thread.score}}</p>
-      <p class="tred-views">Просмотры: {{thread.views}}</p>
+    <mat-card-content class="tred-stat">
+      <p class="tred-score">Рейтинг: {{ thread.score }}</p>
+      <p class="tred-views">Просмотры: {{ thread.views }}</p>
     </mat-card-content>
   </mat-card>
 </div>

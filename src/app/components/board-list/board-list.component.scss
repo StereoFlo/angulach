@@ -14,13 +14,13 @@
 }
 
 .collection {
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #888888;
   padding: 10px 0 10px 10px;
 
   a {
-    color: #888888;
+    color: #eaeaea;
     text-decoration: none;
-    font-weight: 500;
+    //font-weight: 500;
     display: block;
   }
 }
@@ -28,6 +28,10 @@
 .mat-expansion-panel {
   background: #333;
   color: #eaeaea;
+}
+
+.mat-accordion .mat-expansion-panel:not(.mat-expanded), .mat-accordion .mat-expansion-panel:not(.mat-expansion-panel-spacing) {
+  margin-bottom: 5px;
 }
 
 @media (hover: none) {
