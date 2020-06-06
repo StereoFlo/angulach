@@ -33,6 +33,12 @@ export class BoardShowComponent implements OnInit {
     this.isLoading = true;
     this.dvachService.getBoardById(boardId).subscribe(board => {
       this.board = board;
+
+      for (let i = 0; i < board.threads.length; i++) {
+        const comment = board.threads[i].comment;
+        board.threads[i].comment = comment.replace(/<a href="\/(\w+)\/res\/(\d+)\.html#(\d+)" class="post-reply-link">*.+<\/a>/g, '<a href=\'/board/$1/thread/$2\'>$3</a>');
+      }
+
       this.isLoading = false;
     });
   }
