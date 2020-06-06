@@ -1,8 +1,6 @@
 <mat-card-content id="{{ post.num }}" class="post">
     <p class="post-header">
       <span class="author" [innerHTML]="post.name"></span>
-      <span *ngIf="post.answerTo"> >> </span>
-      <a [routerLink]="['/board/' + post.boardId + '/thread/' + post.threadId]" fragment="{{ post.answerTo }}" *ngIf="post.answerTo">{{ post.answerTo }}</a>
       <span class="postId">Post id: {{ post.num }}</span>
     </p>
     <mat-divider class="post-header-divider"></mat-divider>
