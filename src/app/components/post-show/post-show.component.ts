@@ -8,7 +8,7 @@ import {Post} from '../../models/post';
 })
 export class PostShowComponent implements OnInit {
 
-  private linkPattern = /<a href="\/(\w+)\/res\/(\d+)\.html#(\d+)" class="post-reply-link" data-thread="\d+" data-num="\d+">*.+<\/a><br>(.*)/g;
+  private linkPattern = /<a href="\/(\w+)\/res\/(\d+)\.html#(\d+)" class="post-reply-link" data-thread="\d+" data-num="\d+">*.+<\/a>(?<br>)(.*)/g;
   private namePattern = /^.*ID:&nbsp;(.*)/;
 
   @Input() post: Post;
@@ -19,7 +19,8 @@ export class PostShowComponent implements OnInit {
       const answerTo = this.post.comment;
       const boardId = this.post.comment;
       const threadId = this.post.comment;
-      this.post.comment = this.getVar(comment, '$4');
+      this.post.comment = this.getVar(comment, '$5');
+      this.post.comment = this.getVar(comment, '<a href="/board/$1/thread/$2">$3</a>');
       this.post.answerTo = +this.getVar(answerTo, '$3');
       this.post.boardId = this.getVar(boardId, '$1');
       this.post.threadId = +this.getVar(threadId, '$2');
