@@ -36,7 +36,9 @@ export class BoardShowComponent implements OnInit {
 
       for (let i = 0; i < board.threads.length; i++) {
         const comment = board.threads[i].comment;
-        board.threads[i].comment = comment.replace(/<a href="\/(\w+)\/res\/(\d+)\.html#(\d+)" class="post-reply-link">*.+<\/a>/g, '<a href=\'/board/$1/thread/$2\'>$3</a>');
+        board.threads[i].comment = comment.replace(/(<a href="\/(\w+)\/res\/(\d+)\.html#(\d+)" class="post-reply-link">*.+<\/a>)/g, '<a href=\'/board/$2/thread/$3\'>$4</a>');
+        const comment2 = board.threads[i].comment;
+        board.threads[i].comment = comment2.replace(/(http?s:&#47;&#47;2ch.[a-z]{2,3}&#47;([a-z]+)&#47;(?:arch&#47;\d{4}-\d{1,2}-\d{1,2}&#47;)?res&#47;(\d+).html)/g, '<a href=\'/board/$2/thread/$3\'>$3</a>');
       }
 
       this.isLoading = false;
