@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://2ch.api'
+  apiUrl: 'https://api.stereoflo.ru'
 };
 
 /*

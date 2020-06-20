@@ -28,7 +28,7 @@ import {PostShowComponent} from './components/post-show/post-show.component';
     PostShowComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
